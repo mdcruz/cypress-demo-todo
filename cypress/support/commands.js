@@ -6,7 +6,7 @@ Cypress.Commands.add('getFirstTodoItem', () => {
     .invoke('text');
 });
 
-Cypress.Commands.add('verifyTodoItemCount', todoItems => {
+Cypress.Commands.add('verifyTodoItems', todoItems => {
   cy.get('.todo-count')
     .invoke('text')
     .should('be.equal', `${todoItems} left`);
