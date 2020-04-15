@@ -1,32 +1,18 @@
 /// <reference types="cypress" />
 
 describe('TodoApp', () => {
-  before(() => {
-    cy.visit('/');
-    cy.get('.new-todo').type('do lunch and learn about Cypress {enter}');
-    cy.get('.new-todo').type('have lunch {enter}');
-  });
-
   it('should add a new todo successfully', () => {
-    cy.getFirstTodoItem().should(
-      'be.equal',
-      'do lunch and learn about Cypress'
-    );
-
-    cy.verifyTodoItems('2 items');
+    // IMPLEMENT ME!
   });
 
   it('should mark a todo item as completed', () => {
-    cy.get('.toggle')
-      .first()
-      .click();
-
-    cy.verifyTodoItems('1 item');
-
-    cy.contains('Completed').click();
-    cy.getFirstTodoItem().should(
-      'be.equal',
-      'do lunch and learn about Cypress'
-    );
+    // IMPLEMENT ME!
   });
 });
+
+// .new-todo (add todo selector)
+// .todo-list (list of todo)
+// custom command cy.getFirstTodoItem
+// .toggle (toggle which item to complete)
+// 'Completed' (use cy.contains to find a selector by text)
+// custom command cy.getFirstTodoItem
