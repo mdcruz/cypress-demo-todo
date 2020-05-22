@@ -10,9 +10,7 @@ describe('TodoApp', () => {
   });
 
   it('should add a new todo successfully', () => {
-    cy.get('.todo-list')
-      .find('li')
-      .should('have.length', 2);
+    cy.get('.todo-list li').should('have.length', 2);
 
     cy.getFirstTodoItem().should(
       'be.equal',
@@ -21,9 +19,7 @@ describe('TodoApp', () => {
   });
 
   it('should mark a todo item as completed', () => {
-    cy.get('.toggle')
-      .first()
-      .click();
+    cy.get('.toggle').first().click();
 
     cy.contains('Completed').click();
     cy.getFirstTodoItem().should(

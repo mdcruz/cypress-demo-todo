@@ -6,12 +6,12 @@ describe('TodoApp', () => {
   });
 
   it('should mark a todo item as completed', () => {
-    // IMPLEMENT ME!
+   // IMPLEMENT ME!
   });
 });
 
 // .new-todo (add todo selector)
-// .todo-list (list of todo)
+// .todo-list li (list of todo)
 // custom command cy.getFirstTodoItem
 // .toggle (toggle which item to complete)
 // 'Completed' (use cy.contains to find a selector by text)

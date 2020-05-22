@@ -1,7 +1,6 @@
 Cypress.Commands.add('getFirstTodoItem', () => {
   return cy
-    .get('.todo-list')
-    .find('li')
+    .get('.todo-list li')
     .first()
     .invoke('text');
 });
