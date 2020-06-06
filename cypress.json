@@ -1,3 +1,9 @@
 {
-  "baseUrl": "http://todomvc.com/examples/react/"
+  "baseUrl": "http://todomvc.com/examples/react/",
+  "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
 }

@@ -4,11 +4,19 @@
   "description": "Sample project to demo Cypress using the React TODO app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean:reports": "rm -rf mochawesome-report/",
+    "test": "npm run clean:reports && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-tests-report.json",
+    "create:html:report": "marge --reportDir TestReport cypress-tests-report.json",
+    "generate:html:report": "npm run merge:reports && npm run create:html:report"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.6.0"
+    "cypress": "^4.6.0",
+    "mocha": "^7.2.0",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0",
+    "mochawesome-report-generator": "^5.1.0"
   }
 }

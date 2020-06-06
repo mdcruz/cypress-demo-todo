@@ -10,7 +10,7 @@ describe('TodoApp', () => {
   });
 
   it('should add a new todo successfully', () => {
-    cy.get('.todo-list li').should('have.length', 2);
+    cy.get('.todo-list li').should('have.length', 3);
 
     cy.getFirstTodoItem().should(
       'be.equal',
