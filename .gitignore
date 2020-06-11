@@ -4,3 +4,4 @@ cypress/screenshots
 cypress/videos
 mochawesome-report
 cypress-tests-report.json
+TestReport
