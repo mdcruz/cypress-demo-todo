@@ -27,4 +27,16 @@ describe('TodoApp', () => {
       'do lunch and learn about Cypress'
     );
   });
+
+  describe('Nesting', () => {
+    it('should work', () => {
+      cy.get('.todo-list li').should('have.length', 3);
+
+      cy.getFirstTodoItem().should(
+          'be.equal',
+          'do lunch and learn about Cypress'
+      );
+    });
+  });
+
 });
